@@ -64,32 +64,28 @@ video {
 
 
 .cadre-video {
-    position: relative;
-    width: 720px;           
-    height: 450px;               
-    background-image: url("images/cadrevideo.png"); 
-    background-size: 100% 100%;     /* pour que l’image remplisse tout la div sans se répéter */
-    background-position: center;
-    background-repeat: no-repeat;   /* empêche les répétitions */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 40px auto;          
-    overflow: hidden; 
+position: relative;
+width: 100%;
+max-width: 720px;
+aspect-ratio: 16 / 10;
+background-image: url("images/cadrevideo.png");
+background-size: 100% 100%;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto 40px auto;
+overflow: hidden;
 }
 
-
 .cadre-video video {
-    position: absolute;
-
-    top: 45px;
-    left: 20px;   
-    right: 20px;  
-    bottom: 45px;
-    width: auto;
-    height: auto;
-    object-fit: cover; 
-    border-radius: 0;}
+position: absolute;
+width: 85%;
+height: 65%;
+object-fit: cover;
+border-radius: 0;
+}
 
 #video h2{
     text-align: center;
@@ -156,3 +152,18 @@ footer {
     padding: 20px;
     color: #ffd700;
 }
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #video h2 {
+        font-size: 1.8rem;
+    }
+
+    #video p {
+        font-size: 1.1rem;
+    }
+}
+
